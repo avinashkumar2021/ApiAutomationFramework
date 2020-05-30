@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.restassured.reports.LogStatus;
-import com.google.common.io.Files;
+//import com.google.common.io.Files;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.response.Response;
 import com.restassured.constants.Constants;
@@ -53,8 +53,8 @@ public class RestCountriesTest extends BaseTest{
 		Assert.assertEquals(response.jsonPath().get("[0].capital"), data.get("expectedCountryCapital"));
 		
 		//Writing the response to an log file
-		Files.write(response.asByteArray(), 
-				new File(Constants.RESPONSETXTPATH+data.get("TestCaseName")+data.get("countryName")+".txt"));
+	//	Files.write(response.asByteArray(), 
+		//		new File(Constants.RESPONSETXTPATH+data.get("TestCaseName")+data.get("countryName")+".txt"));
 		
 	}
 
